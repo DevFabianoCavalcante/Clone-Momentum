@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-screen img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.hour-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hour-minutes {
+    text-align: center;
+    font-size: 13rem;
+    text-shadow: 0 0 1px black;
+}
+
+.hour-container p {
+    font-size: 5rem;
+    text-shadow: 0 0 1px black;
+}
+
+.motivational-phrase-container {
+    position: relative;
+    top: 32rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    height: 4rem;
+}
+
+.autor-container {
+    display: none;
+    transition: all .3s;
+}
