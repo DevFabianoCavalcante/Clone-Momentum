@@ -10,9 +10,18 @@ const hiddenAutor = () => {
 
 const dataTime = () => {
     const data = new Date;
-    const hour = data.getHours();
-    const minutes = data.getMinutes();
+    const getHour = data.getHours();
+    const hour = getHour <= 9 ? `0${getHour}` : getHour;
+    const getMinutes = data.getMinutes();
+    const minutes = getMinutes <= 9 ? `0${getMinutes}` : getMinutes;
+
     document.querySelector('.hour-minutes').innerHTML = `${hour}:${minutes}`;
+
+};
+
+const salutation = () => {
+    const data = new Date;
+    const hour = data.getHours();
 
     if(nameUser == null) {
         nameUser = 'Mestre';
@@ -25,8 +34,9 @@ const dataTime = () => {
     } else if ( hour >= 4 && hour <= 11) {
         document.querySelector('.salutation').innerHTML = `Bom dia, ${nameUser}.`;
     }
-};
+}
 
+setInterval(salutation, 10);
 setInterval(dataTime, 10);
 
 document.querySelector('.motivational-phrase-container').addEventListener('mouseover', revealAutor);
